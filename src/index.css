@@ -274,7 +274,9 @@ button {
   align-items: start;
 }
 
-.service-card {
+/* Only cards with a photo need the zero-top-padding/bleed treatment —
+   plain text cards keep the base .card padding on all sides. */
+.service-card.has-photo {
   padding: 0 0 30px;
   overflow: hidden;
 }
@@ -287,8 +289,8 @@ button {
   margin-bottom: 20px;
 }
 
-.service-card h3,
-.service-card p {
+.service-card.has-photo h3,
+.service-card.has-photo p {
   margin-left: 30px;
   margin-right: 30px;
 }

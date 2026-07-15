@@ -86,42 +86,42 @@ export const TEAM = [
     quote:
       "At APMG, we understand that traditional treatments don't work for everyone — that's why we offer advanced, evidence-based options alongside compassionate, personalized care.",
     bio: "PLACEHOLDER — full bio and credentials needed.",
-    photo: "/team/christopher-lynn.webp",
+    photo: `${import.meta.env.BASE_URL}team/christopher-lynn.webp`,
   },
   {
     name: "Joe",
     title: "PLACEHOLDER — Title",
     quote: "",
     bio: "PLACEHOLDER — add bio.",
-    photo: "/team/joe.webp",
+    photo: `${import.meta.env.BASE_URL}team/joe.webp`,
   },
   {
     name: "Irina",
     title: "PLACEHOLDER — Title",
     quote: "",
     bio: "PLACEHOLDER — add bio.",
-    photo: "/team/irina.webp",
+    photo: `${import.meta.env.BASE_URL}team/irina.webp`,
   },
   {
     name: "John Santos",
     title: "PLACEHOLDER — Title",
     quote: "",
     bio: "PLACEHOLDER — add bio.",
-    photo: "/team/john-santos.webp",
+    photo: `${import.meta.env.BASE_URL}team/john-santos.webp`,
   },
   {
     name: "Aragon",
     title: "PLACEHOLDER — Title",
     quote: "",
     bio: "PLACEHOLDER — add bio.",
-    photo: "/team/aragon.webp",
+    photo: `${import.meta.env.BASE_URL}team/aragon.webp`,
   },
   {
     name: "PLACEHOLDER — Team Member",
     title: "PLACEHOLDER — Title",
     quote: "",
     bio: "PLACEHOLDER — add bio.",
-    photo: "/team/team-member-6.webp",
+    photo: `${import.meta.env.BASE_URL}team/team-member-6.webp`,
   },
 ];
 

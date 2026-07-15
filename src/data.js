@@ -58,6 +58,7 @@ export const SERVICES = [
     name: "Deep TMS",
     summary:
       "A newer, FDA-approved form of transcranial magnetic stimulation for depression — non-invasive, non-convulsive, and delivered in-office.",
+    image: `${import.meta.env.BASE_URL}services/dtms-treatment.webp`,
   },
   {
     name: "Spravato",

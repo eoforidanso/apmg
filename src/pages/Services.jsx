@@ -16,7 +16,8 @@ export default function Services() {
       <section className="section">
         <div className="container grid grid-3">
           {SERVICES.map((s) => (
-            <div className="card" key={s.name}>
+            <div className="card service-card" key={s.name}>
+              {s.image && <img className="service-photo" src={s.image} alt={s.name} />}
               <h3>{s.name}</h3>
               <p>{s.summary}</p>
             </div>

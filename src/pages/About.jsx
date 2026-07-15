@@ -44,9 +44,11 @@ export default function About() {
               PLACEHOLDER — describe the in-office experience once real office photography is available.
             </p>
           </div>
-          <div className="image-placeholder">
-            <span>Office photo — replace with real photography</span>
-          </div>
+          <img
+            className="office-photo"
+            src={`${import.meta.env.BASE_URL}office.webp`}
+            alt="A comfortable, sunlit consultation space"
+          />
         </div>
       </section>
 

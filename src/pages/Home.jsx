@@ -125,7 +125,7 @@ export default function Home() {
               — {director.name}, {director.title}
             </cite>
           </blockquote>
-          <span className="photo-credit">{IMAGES.quote.credit}</span>
+          {IMAGES.quote.credit && <span className="photo-credit">{IMAGES.quote.credit}</span>}
         </div>
       </section>
 

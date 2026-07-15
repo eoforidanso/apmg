@@ -198,8 +198,9 @@ export const IMAGES = {
     credit: "Photo by Pedro Lastra / Unsplash",
   },
   quote: {
-    url: `${import.meta.env.BASE_URL}quote.jpg`,
-    credit: "Photo by Rebecca Prest / Unsplash",
+    // User-supplied photo (untraced source — no attribution to fabricate).
+    url: `${import.meta.env.BASE_URL}quote.webp`,
+    credit: null,
   },
   whoWeHelp: {
     url: `${import.meta.env.BASE_URL}who-we-help.webp`,

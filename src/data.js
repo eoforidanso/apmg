@@ -189,14 +189,103 @@ export const CONCERNS = [
 ];
 
 // Free-to-use (Unsplash License) stock photography standing in for APMG's own
-// photography until real logo/office/team photos are supplied.
+// photography until real logo/office/team photos are supplied. Self-hosted in
+// public/ (July 2026) so the site doesn't depend on Unsplash's CDN staying up.
 export const IMAGES = {
   hero: {
-    url: "https://images.unsplash.com/photo-1486707471592-8e7eb7e36f78?fm=jpg&q=80&w=2400&auto=format&fit=crop",
+    url: `${import.meta.env.BASE_URL}hero.jpg`,
     credit: "Photo by Inggrid Koe / Unsplash",
   },
   quote: {
-    url: "https://images.unsplash.com/photo-1525891618908-24765267dab7?fm=jpg&q=80&w=2400&auto=format&fit=crop",
+    url: `${import.meta.env.BASE_URL}quote.jpg`,
     credit: "Photo by Rebecca Prest / Unsplash",
   },
+  whoWeHelp: {
+    url: `${import.meta.env.BASE_URL}who-we-help.webp`,
+    credit: "Photo by Anna Shvets / Pexels",
+  },
 };
+
+// Per-route SEO metadata. Consumed by <Seo> (src/components/Seo.jsx), which sets
+// document.title + meta description on navigation. Titles follow
+// "Page — Practice | Locale" for local-search relevance. Descriptions are
+// original marketing copy; confirm any operational claims before launch.
+export const SITE = {
+  name: "Advanced Practice Medical Group",
+  shortName: "APMG",
+  url: "https://eoforidanso.github.io/apmg/",
+  locale: "Chicagoland, Illinois",
+};
+
+export const PAGE_SEO = {
+  "/": {
+    title: "Psychiatry & Mental Health Care in Illinois | APMG",
+    description:
+      "Advanced Practice Medical Group offers personalized psychiatric care, therapy, and advanced treatments like Deep TMS and Spravato — in-person across Chicagoland or via telehealth.",
+  },
+  "/about": {
+    title: "About Us — Advanced Practice Medical Group | Chicagoland Psychiatry",
+    description:
+      "Learn about APMG, a mental health collective combining traditional psychiatric care with advanced interventional treatments across Rolling Meadows, Glenview, and St. Charles, IL.",
+  },
+  "/services": {
+    title: "Services — Psychiatry, Therapy, Deep TMS & Spravato | APMG",
+    description:
+      "From medication management and therapy to Deep TMS, Spravato, and pharmacogenomic testing — explore APMG's full range of evidence-based mental health services.",
+  },
+  "/team": {
+    title: "Our Team — Meet the APMG Clinicians | Chicagoland Psychiatry",
+    description:
+      "Meet the psychiatric and medical specialists at Advanced Practice Medical Group, dedicated to evidence-based, personalized mental health care.",
+  },
+  "/insurance": {
+    title: "Insurance & Coverage | Advanced Practice Medical Group",
+    description:
+      "APMG works with a range of insurance providers, plus self-pay and concierge options, to keep mental health care accessible. Call to verify your coverage.",
+  },
+  "/blog": {
+    title: "Blog — Insights on Mental Wellness | APMG",
+    description:
+      "Perspectives from APMG's clinical team on psychiatric care, Deep TMS, Spravato, telehealth, and advanced treatment options.",
+  },
+  "/contact": {
+    title: "Contact Us | Advanced Practice Medical Group",
+    description:
+      "Reach Advanced Practice Medical Group to request an appointment or ask about care. Call 847-371-5200 or send a message. In crisis? Call or text 988.",
+  },
+  "/privacy": {
+    title: "Privacy Policy | Advanced Practice Medical Group",
+    description:
+      "How Advanced Practice Medical Group collects, uses, and protects information submitted through this website.",
+  },
+};
+
+// PLACEHOLDER — drafted FAQ answers for the practice to review/confirm before
+// launch. The insurance, referral, and wait-time answers make operational claims
+// that must be verified. Also powers FAQPage structured data in index.html if kept.
+export const FAQS = [
+  {
+    q: "Do I need a referral to be seen?",
+    a: "No — you can request an appointment directly, no referral required. If your insurance plan requires one, we'll let you know during scheduling.",
+  },
+  {
+    q: "Do you accept insurance?",
+    a: "We work with a range of insurance providers, and also offer self-pay and concierge options. Call us at 847-371-5200 to verify your specific plan.",
+  },
+  {
+    q: "How soon can new patients be seen?",
+    a: "We aim to see new patients within 7–10 days. Availability varies by location and provider — call us for the soonest opening.",
+  },
+  {
+    q: "Do you offer telehealth as well as in-person visits?",
+    a: "Yes. Many of our services are available by secure video visit, and we also see patients in person across our Chicagoland locations.",
+  },
+  {
+    q: "What conditions do you treat?",
+    a: "Our clinicians treat anxiety, depression, ADHD, trauma and PTSD, bipolar disorder, OCD, and more — for both adults and adolescents.",
+  },
+  {
+    q: "What advanced treatments do you offer?",
+    a: "Beyond psychiatry and therapy, we offer Deep TMS, Spravato (esketamine), and pharmacogenomic testing for patients who need more than a standard approach.",
+  },
+];

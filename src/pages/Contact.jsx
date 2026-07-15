@@ -35,6 +35,10 @@ export default function Contact() {
               <p>Thanks for reaching out — our team will get back to you soon.</p>
             ) : (
               <form onSubmit={handleSubmit} className="contact-form">
+                <p className="form-phi-note">
+                  Please don't include personal health information. This form isn't a secure channel — for
+                  clinical matters, call us at <a href={PHONE_HREF}>{PHONE}</a>.
+                </p>
                 <label>
                   Name
                   <input name="name" value={form.name} onChange={handleChange} required />

@@ -20,7 +20,7 @@ export default function Services() {
         <div className="container">
           {featured && (
             <div className="featured-service">
-              <img className="featured-service-photo" src={featured.image} alt={featured.name} />
+              <img className="featured-service-photo" src={featured.image} alt={featured.name} loading="lazy" />
               <div className="featured-service-content">
                 <span className="eyebrow">Featured Treatment</span>
                 <h3>{featured.name}</h3>

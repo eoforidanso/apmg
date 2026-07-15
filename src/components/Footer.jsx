@@ -48,6 +48,9 @@ export default function Footer() {
 
       <div className="container footer-bottom">
         <p>© {new Date().getFullYear()} Advanced Practice Medical Group. All rights reserved.</p>
+        <Link to="/privacy" className="footer-legal-link">
+          Privacy Policy
+        </Link>
       </div>
     </footer>
   );

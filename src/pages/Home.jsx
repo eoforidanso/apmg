@@ -10,6 +10,7 @@ import {
   PHONE_HREF,
   TRUST_ITEMS,
   CONCERNS,
+  FAQS,
 } from "../data.js";
 import CTASection from "../components/CTASection.jsx";
 
@@ -88,16 +89,26 @@ export default function Home() {
       </div>
 
       <section className="section">
-        <div className="container">
-          <span className="eyebrow">Who We Help</span>
-          <h2>Common concerns we treat</h2>
-          <div className="concerns-row">
-            {CONCERNS.map((c) => (
-              <span className="concern-chip" key={c}>
-                {c}
-              </span>
-            ))}
+        <div className="container who-we-help">
+          <div>
+            <span className="eyebrow">Who We Help</span>
+            <h2>Common concerns we treat</h2>
+            <p className="who-we-help-lead">
+              Care for adults and adolescents navigating a wide range of mental health conditions — with a
+              plan built around you.
+            </p>
+            <div className="concerns-row">
+              {CONCERNS.map((c) => (
+                <span className="concern-chip" key={c}>
+                  {c}
+                </span>
+              ))}
+            </div>
           </div>
+          <figure className="who-we-help-media">
+            <img src={IMAGES.whoWeHelp.url} alt="A person seeking mental health support" loading="lazy" />
+            <figcaption className="photo-credit">{IMAGES.whoWeHelp.credit}</figcaption>
+          </figure>
         </div>
       </section>
 
@@ -147,6 +158,26 @@ export default function Home() {
                   <span className="placeholder-tag">Placeholder</span>
                 </p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container faq-section">
+          <span className="eyebrow">FAQ</span>
+          <h2>Common questions</h2>
+          <div className="faq-list">
+            {FAQS.map((item) => (
+              <details className="faq-item" key={item.q}>
+                <summary>
+                  {item.q}
+                  <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </summary>
+                <p>{item.a}</p>
+              </details>
             ))}
           </div>
         </div>

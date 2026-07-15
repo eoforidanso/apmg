@@ -48,6 +48,7 @@ export default function About() {
             className="office-photo"
             src={`${import.meta.env.BASE_URL}office.webp`}
             alt="A comfortable, sunlit consultation space"
+            loading="lazy"
           />
         </div>
       </section>

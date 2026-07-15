@@ -983,11 +983,14 @@ button {
 }
 
 /* Scroll cue — bouncing chevron anchored to the bottom of the hero, above
-   the trust bar that peeks up over it. */
+   the trust bar that peeks up over it. bottom:52px only left a 12px gap to
+   the trust bar's rounded top edge (6px at the bounce animation's peak) —
+   the trust bar's soft box-shadow bled into that gap and made the cue look
+   like it was being clipped by the trust bar. Moved up for real clearance. */
 .scroll-cue {
   position: absolute;
   left: 50%;
-  bottom: 52px;
+  bottom: 88px;
   transform: translateX(-50%);
   width: 40px;
   height: 40px;

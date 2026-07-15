@@ -22,7 +22,7 @@ export default function Home() {
         <div className="hero-scrim" />
         <div className="container hero-inner">
           <div className="hero-brandrow">
-            <img src="/apmg-logo.webp" alt="" className="brand-logo brand-logo-sm" />
+            <img src={`${import.meta.env.BASE_URL}apmg-logo.webp`} alt="" className="brand-logo brand-logo-sm" />
             <span className="eyebrow">{HERO.eyebrow}</span>
           </div>
           <p className="hero-tagline">{HERO.tagline}</p>

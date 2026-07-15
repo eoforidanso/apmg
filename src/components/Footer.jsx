@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container footer-inner">
         <div className="footer-brand">
           <div className="nav-logo">
-            <img src="/apmg-logo.webp" alt="APMG" className="brand-logo" />
+            <img src={`${import.meta.env.BASE_URL}apmg-logo.webp`} alt="APMG" className="brand-logo" />
           </div>
           <p>A mental health collective offering accessible, personalized care in-person and via telehealth.</p>
           <div className="footer-social">

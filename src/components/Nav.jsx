@@ -9,7 +9,7 @@ export default function Nav({ theme, toggleTheme }) {
     <header className="nav">
       <div className="container nav-inner">
         <NavLink to="/" className="nav-logo" onClick={() => setOpen(false)}>
-          <img src="/apmg-logo.webp" alt="APMG" className="brand-logo" />
+          <img src={`${import.meta.env.BASE_URL}apmg-logo.webp`} alt="APMG" className="brand-logo" />
         </NavLink>
 
         <nav className={`nav-links ${open ? "nav-links-open" : ""}`}>

@@ -80,6 +80,10 @@ export const SERVICES = [
 // REAL — Dr. Christopher Lynn confirmed as Medical Director on goapmg.com; bio is PLACEHOLDER.
 // Photos supplied directly by the user (July 2026) and copied into public/team/.
 // Titles/bios are PLACEHOLDER — only names came from the photo filenames.
+// Each entry also supports optional `credentials` (string), `specialties` (string[]), and
+// `yearsExperience` (string) fields for the Team page's credentials micro-section — left
+// unset here since we don't have real licensure/specialty data for anyone yet, and
+// fabricating clinical credentials for named providers isn't something to guess at.
 export const TEAM = [
   {
     name: "Dr. Christopher Lynn, NP",

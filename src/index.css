@@ -959,30 +959,98 @@ button {
   margin-right: auto;
 }
 
-/* Team */
-.team-card {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
+/* Team — editorial portrait cards on a fixed neutral/clinical palette
+   (intentionally not theme-variable: this section reads as a distinct
+   "paper" panel regardless of light/dark mode, per brand direction). */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
 }
 
-.team-photo {
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
-  border: 2px solid var(--glass-border);
-  box-shadow: var(--glass-shadow);
-  background: var(--glass-bg);
-}
-
-@media (max-width: 500px) {
-  .team-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+@media (max-width: 1000px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
+
+@media (max-width: 640px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.team-card-v2 {
+  background: #f7f5f2;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease;
+}
+
+.team-card-v2:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.team-card-v2:hover .team-card-name {
+  color: #7c9473;
+}
+
+.team-portrait {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.team-card-name {
+  font-size: 22px;
+  font-weight: 600;
+  color: #2e2e2e;
+  margin: 0 0 4px;
+  transition: color 0.2s ease;
+}
+
+.team-card-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #6a6a6a;
+  margin: 0 0 16px;
+}
+
+.team-card-quote {
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.5;
+  color: #4a4a4a;
+  margin: 0 0 12px;
+}
+
+.team-card-bio {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #4a4a4a;
+  max-width: 90%;
+  margin: 0;
+}
+
+.team-card-credentials {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e4e1db;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: #6a6a6a;
+}
+
+.team-card-credentials strong {
+  color: #4a4a4a;
+  font-weight: 600;
 }
 
 /* Contact form */

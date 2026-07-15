@@ -267,6 +267,13 @@ button {
 
 /* Service cards with a photo bleed the image to the card edges, then
    restore the card's normal side padding for the text below it. */
+/* Grid rows default to stretch, so the one card with a photo (taller than
+   its plain-text row-mates) was forcing every card in that row to match
+   its height, leaving big empty voids in the shorter cards. */
+.services-grid {
+  align-items: start;
+}
+
 .service-card {
   padding: 0 0 30px;
   overflow: hidden;

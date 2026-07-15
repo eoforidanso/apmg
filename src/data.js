@@ -195,7 +195,7 @@ export const CONCERNS = [
 export const IMAGES = {
   hero: {
     url: `${import.meta.env.BASE_URL}hero.jpg`,
-    credit: "Photo by Inggrid Koe / Unsplash",
+    credit: "Photo by Dawid Zawiła / Unsplash",
   },
   quote: {
     url: `${import.meta.env.BASE_URL}quote.jpg`,

@@ -970,7 +970,10 @@ button {
    photo with no other contrast-guaranteeing layer, and photo brightness
    varies. Verified 5.5:1+ against a worst-case bright photo. */
 .photo-credit {
-  display: inline-block;
+  /* block + fit-content: pill hugs its text but still sits on its own line
+     (inline-block let it flow up beside the hero's call link). */
+  display: block;
+  width: fit-content;
   margin-top: 18px;
   padding: 4px 10px;
   font-size: 0.72rem;

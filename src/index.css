@@ -772,6 +772,51 @@ button {
   color: #ffffff;
 }
 
+/* The fixed editorial type scale above (48px headline, 18px eyebrow) was
+   sized for desktop and wraps badly on narrow phones — a 3-word eyebrow
+   wrapping to 3 lines plus a 6-line headline made the whole card sprawl
+   past 1.5 screens. Scale everything down and tighten spacing on mobile. */
+@media (max-width: 640px) {
+  .hero-inner {
+    padding: 32px 24px 28px;
+  }
+
+  .hero .eyebrow {
+    font-size: 0.72rem;
+  }
+
+  .hero-tagline {
+    margin-top: 14px;
+  }
+
+  .hero h1 {
+    margin-top: 14px;
+    font-size: 2.1rem;
+  }
+
+  .hero-subhead {
+    margin-top: 14px;
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    margin-top: 28px;
+    gap: 14px;
+  }
+
+  .hero-actions .btn {
+    font-size: 1rem;
+  }
+
+  .hero-call-link {
+    margin-top: 22px;
+  }
+
+  .photo-credit {
+    margin-top: 12px;
+  }
+}
+
 .photo-credit {
   display: block;
   margin-top: 18px;

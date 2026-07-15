@@ -78,6 +78,7 @@ export default function Screener({ screener, onRestart }) {
         <div className="screener-cta">
           <a href={BOOKING_URL} target="_blank" rel="noreferrer" className="btn btn-primary">
             Request an Appointment
+            <span className="sr-only"> (opens in a new tab)</span>
           </a>
           <a href={PHONE_HREF} className="btn btn-outline">
             Call {PHONE}

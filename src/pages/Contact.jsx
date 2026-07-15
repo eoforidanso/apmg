@@ -72,6 +72,7 @@ export default function Contact() {
             ))}
             <a href={BOOKING_URL} target="_blank" rel="noreferrer" className="btn btn-outline">
               Request Appointment Instead
+              <span className="sr-only"> (opens in a new tab)</span>
             </a>
           </div>
         </div>

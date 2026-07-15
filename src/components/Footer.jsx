@@ -14,6 +14,7 @@ export default function Footer() {
             {SOCIAL_LINKS.map((s) => (
               <a key={s.label} href={s.href} target="_blank" rel="noreferrer">
                 {s.label}
+                <span className="sr-only"> (opens in a new tab)</span>
               </a>
             ))}
           </div>
@@ -30,6 +31,7 @@ export default function Footer() {
             <li>
               <a href={BOOKING_URL} target="_blank" rel="noreferrer">
                 Get Started
+                <span className="sr-only"> (opens in a new tab)</span>
               </a>
             </li>
           </ul>

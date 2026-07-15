@@ -1,4 +1,5 @@
 import { INSURANCE_PROVIDERS, PHONE, PHONE_HREF } from "../data.js";
+import CostTransparency from "../components/CostTransparency.jsx";
 
 export default function Insurance() {
   return (
@@ -25,6 +26,16 @@ export default function Insurance() {
               Don't see your plan? Call us at <a href={PHONE_HREF}>{PHONE}</a> to check your coverage — we
               also offer self-pay and concierge options.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-alt">
+        <div className="container">
+          <span className="eyebrow">Cost & Coverage</span>
+          <h2>What to expect financially</h2>
+          <div style={{ marginTop: 32 }}>
+            <CostTransparency />
           </div>
         </div>
       </section>

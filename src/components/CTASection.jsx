@@ -1,4 +1,5 @@
 import { BOOKING_URL, PHONE, PHONE_HREF } from "../data.js";
+import WaitlistForm from "./WaitlistForm.jsx";
 
 export default function CTASection() {
   return (
@@ -9,11 +10,13 @@ export default function CTASection() {
         <div className="cta-actions">
           <a href={BOOKING_URL} target="_blank" rel="noreferrer" className="btn btn-primary">
             Request Appointment
+            <span className="sr-only"> (opens in a new tab)</span>
           </a>
           <a href={PHONE_HREF} className="btn btn-outline">
             Call {PHONE}
           </a>
         </div>
+        <WaitlistForm />
       </div>
     </section>
   );

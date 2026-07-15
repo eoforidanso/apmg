@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FIRST_VISIT, BOOKING_URL, PHONE, PHONE_HREF } from "../data.js";
+import CostTransparency from "../components/CostTransparency.jsx";
 
 export default function FirstVisit() {
   return (
@@ -57,14 +58,12 @@ export default function FirstVisit() {
           <span className="eyebrow">Cost & insurance</span>
           <h2>Care you can plan for</h2>
           <p className="first-visit-cost">
-            No referral is needed to be seen. We work with a range of insurance plans and also offer self-pay
-            options — and we'll help verify your benefits before your visit so you know what to expect.
-            <span className="placeholder-tag">Confirm real pricing & payer details</span>
+            No referral is needed to be seen. See our full <Link to="/insurance">insurance page</Link> for
+            accepted plans.
           </p>
-          <p className="first-visit-cost">
-            Questions about coverage? Call us at <a href={PHONE_HREF}>{PHONE}</a> or see our{" "}
-            <Link to="/insurance">insurance page</Link>.
-          </p>
+          <div style={{ marginTop: 24 }}>
+            <CostTransparency />
+          </div>
         </div>
       </section>
 
@@ -86,6 +85,7 @@ export default function FirstVisit() {
           <div className="first-visit-cta-actions">
             <a href={BOOKING_URL} target="_blank" rel="noreferrer" className="btn btn-primary">
               Request an Appointment
+              <span className="sr-only"> (opens in a new tab)</span>
             </a>
             <a href={PHONE_HREF} className="btn btn-outline">
               Call {PHONE}

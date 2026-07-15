@@ -21,8 +21,11 @@ function App() {
   return (
     <>
       <Seo />
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
       <Nav theme={theme} toggleTheme={toggleTheme} />
-      <main style={{ flex: 1 }}>
+      <main id="main-content" style={{ flex: 1 }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

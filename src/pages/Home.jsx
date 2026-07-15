@@ -33,6 +33,7 @@ export default function Home() {
             <div>
               <a href={BOOKING_URL} target="_blank" rel="noreferrer" className="btn btn-primary">
                 Request Appointment
+                <span className="sr-only"> (opens in a new tab)</span>
                 <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path
                     d="M3.5 8h9M8.5 3.5 13 8l-4.5 4.5"

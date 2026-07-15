@@ -429,3 +429,32 @@ export const FIRST_VISIT = {
     "A stable internet connection — we'll send a secure video link before your visit",
   ],
 };
+
+// PLACEHOLDER — cost fear is the #1 barrier to seeking mental health care, so
+// this is deliberately structured (not a vague "we accept insurance" line).
+// The STRUCTURE and framing are real; the specific dollar figures, sliding
+// scale criteria, and superbill process are NOT — those need the practice's
+// actual billing/pricing info before launch. Do not fill these with invented
+// numbers; a wrong number on a real medical site is worse than a placeholder.
+export const COST_TRANSPARENCY = [
+  {
+    title: "We verify your benefits",
+    body: "Before your first visit, we'll check your insurance coverage and let you know what to expect — so there are no surprises.",
+    confirmed: true,
+  },
+  {
+    title: "Self-pay pricing",
+    body: "PLACEHOLDER — list per-visit self-pay rates (initial evaluation, follow-up, therapy session).",
+    confirmed: false,
+  },
+  {
+    title: "Sliding scale",
+    body: "PLACEHOLDER — confirm whether a sliding scale is offered and, if so, the criteria and how to ask about it.",
+    confirmed: false,
+  },
+  {
+    title: "Superbills for out-of-network claims",
+    body: "PLACEHOLDER — confirm whether APMG provides superbills for patients to self-submit to an out-of-network plan.",
+    confirmed: false,
+  },
+];

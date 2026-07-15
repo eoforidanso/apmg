@@ -1003,7 +1003,11 @@ button {
 }
 
 .page-hero {
-  padding: 72px 0 40px;
+  /* Longhand top/bottom only — a shorthand here would zero out the
+     left/right padding inherited from .container (0 24px), same bug
+     class as the footer-inner fix. */
+  padding-top: 72px;
+  padding-bottom: 40px;
   text-align: center;
 }
 

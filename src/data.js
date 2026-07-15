@@ -194,13 +194,15 @@ export const CONCERNS = [
 // public/ (July 2026) so the site doesn't depend on Unsplash's CDN staying up.
 export const IMAGES = {
   hero: {
-    url: `${import.meta.env.BASE_URL}hero.jpg`,
-    credit: "Photo by Pedro Lastra / Unsplash",
+    // User-supplied photo (untraced source — no attribution to fabricate).
+    // Native size is 1000x667 — softer than ideal for a full-bleed hero
+    // that can render up to ~2400px wide; flagged to the user.
+    url: `${import.meta.env.BASE_URL}hero.webp`,
+    credit: null,
   },
   quote: {
-    // User-supplied photo (untraced source — no attribution to fabricate).
-    url: `${import.meta.env.BASE_URL}quote.webp`,
-    credit: null,
+    url: `${import.meta.env.BASE_URL}quote.jpg`,
+    credit: "Photo by Johannes Plenio / Unsplash",
   },
   whoWeHelp: {
     url: `${import.meta.env.BASE_URL}who-we-help.webp`,

@@ -53,7 +53,7 @@ export default function Home() {
           <a href={PHONE_HREF} className="hero-call-link">
             Or call us at {PHONE}
           </a>
-          <span className="photo-credit">{IMAGES.hero.credit}</span>
+          {IMAGES.hero.credit && <span className="photo-credit">{IMAGES.hero.credit}</span>}
         </div>
 
         <a href="#trust-bar" className="scroll-cue" aria-label="Scroll to learn more">

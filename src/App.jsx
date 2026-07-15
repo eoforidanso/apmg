@@ -2,9 +2,12 @@ import { Routes, Route } from "react-router-dom";
 import Nav from "./components/Nav.jsx";
 import Footer from "./components/Footer.jsx";
 import Seo from "./components/Seo.jsx";
+import CrisisButton from "./components/CrisisButton.jsx";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Services from "./pages/Services.jsx";
+import FirstVisit from "./pages/FirstVisit.jsx";
+import SelfCheck from "./pages/SelfCheck.jsx";
 import Team from "./pages/Team.jsx";
 import Insurance from "./pages/Insurance.jsx";
 import Blog from "./pages/Blog.jsx";
@@ -24,6 +27,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/first-visit" element={<FirstVisit />} />
+          <Route path="/self-check" element={<SelfCheck />} />
           <Route path="/team" element={<Team />} />
           <Route path="/insurance" element={<Insurance />} />
           <Route path="/blog" element={<Blog />} />
@@ -32,6 +37,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      <CrisisButton />
     </>
   );
 }

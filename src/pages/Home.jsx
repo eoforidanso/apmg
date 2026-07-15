@@ -104,6 +104,9 @@ export default function Home() {
                 </span>
               ))}
             </div>
+            <Link to="/self-check" className="who-we-help-selfcheck">
+              Not sure where to start? Take a 2-minute self-check →
+            </Link>
           </div>
           <figure className="who-we-help-media">
             <img src={IMAGES.whoWeHelp.url} alt="A person seeking mental health support" loading="lazy" />
